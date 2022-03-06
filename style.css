@@ -6,12 +6,13 @@
 }
 
 body{
-    /* height: 100vh; */
+    background-color: #f0efef;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     flex-direction: column;
     position: relative;
+    color: #312f2f;
 }
 
 .toggleNav{
@@ -19,14 +20,14 @@ body{
 }
 
 .nav-logo{
-    max-height: 85px;
+    max-height: 60px;
 }
 
 .flex-nav{
     padding: 0 20px;
     display: flex;
     align-items: stretch;
-    border: 1px solid red;
+    background-color: rgba(212, 67, 67, 0.87);
 }
 
 .flex-nav .nav-items{
@@ -36,6 +37,7 @@ body{
 .nav-header{
     font-size: 100%;
     margin-right: 10px;
+    color: #dad5d5;
 }
 
 .logo-flex{
@@ -48,10 +50,10 @@ body{
 .nav-items{
     list-style: none;
     display: flex;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
+    color: #f0efef;
     align-items: stretch;
-    border: 1px solid red;
     gap: 10px;
 }
 
@@ -72,18 +74,19 @@ body{
 }
 
 .nav-items a:link, .nav-items a:visited{
+    color: #f0efef;
     text-decoration: none;
-    color: #000;
     flex: 1;
 }
 
 .nav-items a:hover, .nav-items a:active{
     text-decoration: none;
-    color: #3a3838;
+    color: rgba(0, 217, 255, 0.596);
 }
 
 .nav-items a:hover:not(.social-icon), .nav-items a:active:not(.social-icon){
     background-color: rgba(0, 0, 0, 0.2);
+    color: #f0efef;
 }
 
 .social-first{
@@ -92,7 +95,6 @@ body{
 
 .wrapper{
     display: flex;
-    flex-wrap: wrap;
     flex: 1 1 auto;
     height: 100%;
 }
@@ -101,25 +103,148 @@ body{
 }
 
 .sponsored{
-    flex: 1  1 auto;
-    max-width: 15%;
+    flex: 0  1 15%;
     order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sponsored img{
+    margin: 20px 0;
 }
 
 .main-article{
-    border: 3px solid red;
-    max-width: 67%;
-    flex: 1 1 auto;
+    border-left: 2px  solid  rgba(169, 169, 169, 0.3);
+    border-right: 2px  solid  rgba(169, 169, 169, 0.3);
+    max-width: 70%;
+    flex: 1;
     order : 2;
 }
 
 .realted{
     order: 3;
-    flex: 1 1 auto;
+    flex: 0 1 15%;
     max-width: 15%;
 }
 
 footer{
-    border: 3px solid red;
-    height: 100px; 
+    height: 100px;
+    margin-top: 10px; 
+    background-color: rgba(0, 0, 0, 0.884);
+}
+
+.related-posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    background-color: rgba(226, 225, 225, 0.493);
+    border-bottom: 5px solid rgba(212, 67, 67, 0.87);
+    border-top: 5px solid rgba(212, 67, 67, 0.87);
+}
+
+.related-posts h4{
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.related{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-article{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.related-article img{
+    height: 100px;
+    max-width: 50%;
+    flex: 0 0 auto;
+    margin: 10px 10px 0 0 ;
+}
+
+.related-list{
+    padding: 10px;
+}
+
+.related-a{
+    display: inline-block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+    word-wrap: break-word;
+}
+
+.related-author{
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.main-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-article h2{
+    margin-top: 25px;
+    font-size: 38px;
+    color: #312f2f;
+}
+
+.main-article time{
+    align-self: flex-end;
+    margin: 10px calc(100% - 95%) 0 0 ; 
+    font-style: italic;
+}
+
+.img-figure{
+    margin-top: 10px;
+   text-align: center;
+}
+
+.post-img{
+    max-width: 90%;
+}
+
+.article-pharagraph{
+    max-width: 90%;
+    margin-top: 10px; 
+    line-height: 1.5;
+}
+
+.list-title{
+    align-self: flex-start;
+    margin: 10px calc(100% - 95%);
+    font-size: 26px;
+}
+
+.test-list{
+    align-self: flex-start;
+    margin: 10px calc(100% - 95%);
+    font-size: 20px;
+    line-height: 2;
+}
+
+.img-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px calc(100% - 95%);
+}
+
+.img-gallery img{
+    flex: 1 1 50%;
+    max-width: calc(50% - 10px);
 }
