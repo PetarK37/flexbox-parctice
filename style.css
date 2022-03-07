@@ -114,6 +114,9 @@ body{
 .sponsored img{
     margin: 20px 0;
 }
+.sponoserd-content-mobile{
+    display: none;
+}
 
 .main-article{
     border-left: 2px  solid  rgba(169, 169, 169, 0.3);
@@ -123,10 +126,9 @@ body{
     order : 2;
 }
 
-.realted{
+.related{
     order: 3;
-    flex: 0 1 15%;
-    max-width: 15%;
+    flex: 0 1 20%;
 }
 
 footer{
@@ -159,7 +161,6 @@ footer{
 .related-article{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     word-wrap: break-word;
 }
 
@@ -247,4 +248,109 @@ footer{
 .img-gallery img{
     flex: 1 1 50%;
     max-width: calc(50% - 10px);
+}
+
+@media screen and (max-width : 767px) 
+{
+    .wrapper{
+        flex-wrap: wrap;
+    }
+
+    .sponsored{
+        flex: 0  1 100%;
+        order: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .sponoserd-content{
+        display: none;
+    }
+
+    .sponoserd-content-mobile{
+        display: inline-block;
+        width: 90%;
+    }
+
+    .main-article{
+        border-left: 2px  solid  rgba(169, 169, 169, 0.3);
+        border-right: 2px  solid  rgba(169, 169, 169, 0.3);
+        max-width: 100%;
+        flex: 1;
+        order : 1;
+    }
+    
+    .related{
+        order: 2;
+        flex: 0 1 100%;
+    }
+
+    .related-article{
+        flex-direction: row;
+    }   
+
+    .nav-items li{
+        flex: 0 1 100%;
+        display: flex;
+    }
+
+    .nav-items{
+        display: none;
+    }
+
+    .flex-nav .nav-items{
+        flex: 0 0 100%;
+        justify-content: center;
+    }
+
+    .flex-nav .social{
+        margin-top: 20px;
+        flex: 0 0 28%;
+    }
+
+    .social-first{
+        margin: 0;
+    }
+
+
+    .flex-nav{
+        flex-wrap: wrap;
+    }
+
+    .open{
+        flex: 0 0 100%;
+                display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo-flex{
+        flex: 1 1 50%;
+    }
+
+
+    .toggleNav{
+        flex: 1 1 50%;
+        justify-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .toggleNav:link, .toggleNav:visited{
+        color: #f0efef;
+        text-decoration: none;
+        flex: 1;
+    }
+    
+    .toggleNav:hover, .toggleNav:active{
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width : 1023px) {
+    .related-article{
+        flex-direction: column;
+    }    
 }

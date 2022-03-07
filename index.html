@@ -15,14 +15,14 @@
 </head>
 
 <body>
-    <header>
+    <header class="hedaer-nav">
         <nav class="flex-nav">
             <div class="logo-flex">
                 <img src="img/—Pngtree—open book design_3552582.png" alt="company-logo" class="nav-logo">
                 <h1 class="nav-header">Lorem ipsum</h1>
             </div>
-            <a href="#" class="toggleNav">☰ Menu</a>
-            <ul class="nav-items">
+            <a href="#" class="toggleNav" id="toggleNav">☰ Menu</a>
+            <ul class="nav-items" id="nav-items">
                 <li><a href="#"><span> Item 01</span></a></li>
                 <li><a href="#"> <span> Item 02 </span> </a></li>
                 <li><a href="#"><span> Item 03 </span> </a></li>
@@ -41,8 +41,10 @@
     </header>
     <div class="wrapper">
         <aside class="sponsored">
-            <img alt="sponoserd-content" src="img/freshdesk-vertical-thin-ad.png">
-            <img alt="sponoserd-content" src="img/freshdesk-vertical-thin-ad.png">
+            <img alt="sponoserd-content" class="sponoserd-content" src="img/freshdesk-vertical-thin-ad.png">
+            <img alt="sponoserd-content" class="sponoserd-content" src="img/freshdesk-vertical-thin-ad.png">
+            <img alt="sponoserd-content-mobile" class=" sponoserd-content-mobile"
+                src="img/freshdesk-vertical-thin-ad..mobilepng.png">
         </aside>
         <article class="main-article">
             <header>
@@ -121,6 +123,17 @@
     </div>
     <footer>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            $('#toggleNav').on('click', function () {
+                $('#nav-items').toggleClass('open');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
